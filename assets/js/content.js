@@ -221,23 +221,46 @@ window.CONTENT = {
         galleryFolder: "defence_ncc",
         text: "Being the CSM of 105 Cadets in National Cadet Corps inducted me in Defence. This experience culminated into being selected for Singapore Youth Exchange Program 2020. Reaching till level 3 in Army SSB Conference after 5 attempts and winning DGV College's mock SSB organised by real colonels, has made sure my innate ability to Lead under pressure has been proved multiple times.",
         gallery: [
-          { src: "ncc_guard",    caption: "Guard duty · NCC",      alt: "Sri Saye Magesh in NCC uniform on guard duty" },
-          { src: "ncc_portrait", caption: "Company Sergeant Major", alt: "Formal portrait in NCC uniform" },
-          { src: "ncc_cadets",   caption: "The company · NCC",      alt: "Group of NCC cadets in uniform" }
+          { src: "img_1093", caption: "Defence & NCC" },
+          { src: "ncc_cadets", caption: "Defence & NCC" },
+          { src: "photo_1", caption: "Defence & NCC" },
+          { src: "photo_2", caption: "Defence & NCC" },
+          { src: "photo_3", caption: "Defence & NCC" },
+          { src: "photo_4", caption: "Defence & NCC" },
+          { src: "photo_5", caption: "Defence & NCC" },
+          { src: "photo_6", caption: "Defence & NCC" },
+          { src: "photo_7", caption: "Defence & NCC" },
+          { src: "photo_8", caption: "Defence & NCC" },
+          { src: "photo_9", caption: "Defence & NCC" },
+          { src: "photo_10", caption: "Defence & NCC" },
+          { src: "photo_11", caption: "Defence & NCC" }
         ]
       },
       {
         label: "Extracurricular",
         galleryFolder: "extracurricular",
         text: "Having been always an 'Yes Man' at school I have won more than 80 awards in diverse fields like elocution, acting, paintings, singing. Additionally being a President of annual drama club of my college provided ample exposure which helped in building creativity and adaptability and also made me curious learner throughout my life span.",
-        gallery: []
+        gallery: [
+          { src: "photo_1", caption: "Extracurricular" },
+          { src: "photo_2", caption: "Extracurricular" },
+          { src: "photo_3", caption: "Extracurricular" },
+          { src: "photo_4", caption: "Extracurricular" }
+        ]
       },
       {
         label: "Sports",
         galleryFolder: "sports",
         text: "I actively play multiple sports like badminton, Cycling and cricket to stay agile and team-oriented, but my core competitive drive lies in state-level Table Tennis and Long Distance Running. Table Tennis trained my split-second decision-making, while long-distance running taught me profound resilience. Beyond competition, prioritizing daily health and fitness is a non-negotiable that keeps my mind sharp under pressure. Whether on the pitch, the table, or the road, sports have hardwired me to outlast any challenge.",
         gallery: [
-          { src: "sport_trophy", caption: "Long distance", alt: "Running trophy topped with a sprinting figure" }
+          { src: "photo_1", caption: "Sports" },
+          { src: "photo_2", caption: "Sports" },
+          { src: "photo_3", caption: "Sports" },
+          { src: "photo_4", caption: "Sports" },
+          { src: "photo_5", caption: "Sports" },
+          { src: "photo_6", caption: "Sports" },
+          { src: "photo_7", caption: "Sports" },
+          { src: "photo_8", caption: "Sports" },
+          { src: "photo_9", caption: "Sports" }
         ]
       },
       {
@@ -251,11 +274,18 @@ window.CONTENT = {
         galleryFolder: "photography",
         text: "For me photography means freezing the neglected aspects of the fast paced environment around me. As I tend to find patterns among complex numbers and financial statements, similarly through photography, I can create images that capture both movement and tranquillity within a single shot. In photography, there is no need for any words rather images convey everything.",
         gallery: [
-          { src: "photo_palm_sunset",  caption: "Sundown through the palms", alt: "Sun setting behind coconut palms" },
-          { src: "photo_storm_cloud",  caption: "Anvil cloud building",       alt: "A towering storm cloud over rooftops at dusk" },
-          { src: "photo_rooftop_dusk", caption: "Rooftop, last light",        alt: "Silhouette on a rooftop against the setting sun" },
-          { src: "photo_night_bloom",  caption: "Night-blooming cereus",      alt: "A white night-blooming cereus flower" },
-          { src: "photo_skyline_dusk", caption: "Chennai skyline at dusk",    alt: "Wide view of Chennai skyline at dusk" }
+          { src: "photo_1", caption: "Photography" },
+          { src: "photo_2", caption: "Photography" },
+          { src: "photo_3", caption: "Photography" },
+          { src: "photo_4", caption: "Photography" },
+          { src: "photo_5", caption: "Photography" },
+          { src: "photo_6", caption: "Photography" },
+          { src: "photo_7", caption: "Photography" },
+          { src: "photo_8", caption: "Photography" },
+          { src: "photo_9", caption: "Photography" },
+          { src: "photo_10", caption: "Photography" },
+          { src: "photo_11", caption: "Photography" },
+          { src: "photo_12", caption: "Photography" }
         ]
       }
     ]

@@ -152,6 +152,13 @@ window.CONTENT = {
       description: "An AI tool, in development, that converts raw financial statements into structured analysis and generates industry-benchmarked insights and hypotheses.",
       stack:    ["AI agents", "Financial analysis", "Benchmarking"],
       links:    []
+    },
+    {
+      title:    "Climate Resilience & Adaptive Strategies — Natham Kariyacheri, Chengalpattu",
+      category: "Sustainability",
+      description: "Led a 10-member team on a field-based sustainability initiative, engaging farmers and SHGs to drive climate-resilient agricultural practices, strengthen market linkages, and create livelihood opportunities. Acted as the SPOC between villagers and team members, overcoming language and communication barriers to build trust and drive active community participation. Promoted modern, water-efficient farming practices and awareness of drought-resilient crops, connecting climate adaptation with sustainable livelihoods. Built direct market linkages by identifying vendors and reducing intermediary dependence, improving farmer value capture while enabling SHG-led employment in sorting, packaging, and coordination.",
+      stack:    ["Leadership & Team Management", "Stakeholder Management", "Market Linkages & Value Chain", "Sustainability & ESG"],
+      links:    [{ label: "Images", url: "assets/img/projects/karma_yoga/index.html" }]
     }
   ],
 

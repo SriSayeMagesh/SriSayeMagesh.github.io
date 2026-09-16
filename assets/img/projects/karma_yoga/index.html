@@ -1,0 +1,97 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Karma Yoga — Field Images · Sri Saye Magesh N</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0A0E0C;color:#d4d8d5;font-family:system-ui,sans-serif;min-height:100vh}
+  header{padding:2rem;border-bottom:1px solid #1e2a22}
+  header a{color:#FFA94D;text-decoration:none;font-size:.85rem;letter-spacing:.1em}
+  h1{font-size:1.1rem;margin-top:.5rem;color:#fff}
+  p.sub{font-size:.8rem;color:#7a8f7e;margin-top:.25rem}
+  #gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem;padding:2rem}
+  .img-card{border-radius:4px;overflow:hidden;border:1px solid #1e2a22;background:#111;cursor:pointer;transition:border-color .2s}
+  .img-card:hover{border-color:#FFA94D}
+  .img-card img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;filter:brightness(.9);transition:filter .3s}
+  .img-card:hover img{filter:brightness(1)}
+  .img-card span{display:block;padding:6px 10px;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:#7a8f7e}
+  #empty{padding:4rem 2rem;text-align:center;color:#7a8f7e;font-style:italic}
+  /* Lightbox */
+  #lb{display:none;position:fixed;inset:0;background:rgba(0,0,0,.93);z-index:99;align-items:center;justify-content:center;flex-direction:column;gap:1rem}
+  #lb.on{display:flex}
+  #lb img{max-width:90vw;max-height:80vh;border-radius:3px}
+  #lb p{color:#aaa;font-size:.8rem}
+  #lb button{position:absolute;background:none;border:1px solid #333;color:#ccc;padding:.4rem .9rem;border-radius:3px;cursor:pointer;font-size:1.1rem}
+  #lbClose{top:1rem;right:1rem}
+  #lbPrev{left:1rem}
+  #lbNext{right:1rem}
+  #lbPrev,#lbNext{top:50%;transform:translateY(-50%)}
+</style>
+</head>
+<body>
+<header>
+  <a href="../../../../../../index.html">← Back to Portfolio</a>
+  <h1>Climate Resilience & Adaptive Strategies</h1>
+  <p class="sub">Natham Kariyacheri, Chengalpattu &nbsp;·&nbsp; Karma Yoga Field Initiative</p>
+</header>
+
+<div id="gallery"></div>
+<p id="empty" hidden>No images added yet. Drop images into this folder and ask Antigravity to update.</p>
+
+<div id="lb">
+  <button id="lbClose">&#10005;</button>
+  <button id="lbPrev">&#8249;</button>
+  <img id="lbImg" src="" alt="">
+  <p id="lbCap"></p>
+  <button id="lbNext">&#8250;</button>
+</div>
+
+<script>
+// List of images — Antigravity updates this array when you add photos
+var IMAGES = [
+  /* { src: "filename.jpg", caption: "Description" } */
+];
+
+var gallery = document.getElementById('gallery');
+var empty   = document.getElementById('empty');
+var lb = document.getElementById('lb');
+var lbImg = document.getElementById('lbImg');
+var lbCap = document.getElementById('lbCap');
+var at = 0;
+
+if (!IMAGES.length) {
+  empty.hidden = false;
+} else {
+  IMAGES.forEach(function(img, i) {
+    var card = document.createElement('div');
+    card.className = 'img-card';
+    card.innerHTML = '<img src="' + img.src + '" alt="' + (img.caption||'') + '" loading="lazy"><span>' + (img.caption || img.src) + '</span>';
+    card.addEventListener('click', function() { open(i); });
+    gallery.appendChild(card);
+  });
+}
+
+function open(i) {
+  at = (i + IMAGES.length) % IMAGES.length;
+  lbImg.src = IMAGES[at].src;
+  lbCap.textContent = (IMAGES[at].caption || '') + '  ' + (at+1) + ' / ' + IMAGES.length;
+  lb.classList.add('on');
+  document.body.style.overflow = 'hidden';
+}
+function close() { lb.classList.remove('on'); document.body.style.overflow = ''; }
+
+document.getElementById('lbClose').onclick = close;
+document.getElementById('lbPrev').onclick = function() { open(at-1); };
+document.getElementById('lbNext').onclick = function() { open(at+1); };
+lb.addEventListener('click', function(e){ if(e.target===lb) close(); });
+document.addEventListener('keydown', function(e){
+  if(!lb.classList.contains('on')) return;
+  if(e.key==='Escape') close();
+  if(e.key==='ArrowLeft') open(at-1);
+  if(e.key==='ArrowRight') open(at+1);
+});
+</script>
+</body>
+</html>

@@ -202,19 +202,28 @@ window.CONTENT = {
 
   /* ── 07 · Off duty ──────────────────────────────────────────────────── */
   offDuty: {
-    lede: "Three things outside the work that shaped how I operate: the NCC, sport, and a camera.",
+    lede: "Five dimensions beyond the spreadsheet — defence, stage, sport, music, and a lens — that shaped how I lead, compete, and create.",
+    witnessBtnLabel: "Witness them",
     strands: [
       {
-        label: "NCC",
-        text:  "Company Sergeant Major at Ramakrishna Mission Vivekananda College, responsible for over 100 cadets, and selected for the Youth Exchange Programme to Singapore. Five Services Selection Boards attended; three conference-outs."
+        label: "Defence & NCC",
+        text:  "Being the CSM of 105 Cadets in National Cadet Corps inducted me in Defence. This experience culminated into being selected for Singapore Youth Exchange Program 2020. Reaching till level 3 in Army SSB Conference after 5 attempts and winning DGV College's mock SSB organised by real colonels, has made sure my innate ability to Lead under pressure has been proved multiple times."
       },
       {
-        label: "Sport",
-        text:  "Table tennis at state and district level, and inter-company champion at NatWest. Third place over 6 km at the Strength Fit marathon in Hosur, in 30 minutes."
+        label: "Extracurricular",
+        text:  "Having been always an 'Yes Man' at school I have won more than 80 awards in diverse fields like elocution, acting, paintings, singing. Additionally being a President of annual drama club of my college provided ample exposure which helped in building creativity and adaptability and also made me curious learner throughout my life span."
+      },
+      {
+        label: "Sports",
+        text:  "I actively play multiple sports like badminton, Cycling and cricket to stay agile and team-oriented, but my core competitive drive lies in state-level Table Tennis and Long Distance Running. Table Tennis trained my split-second decision-making, while long-distance running taught me profound resilience. Beyond competition, prioritizing daily health and fitness is a non-negotiable that keeps my mind sharp under pressure. Whether on the pitch, the table, or the road, sports have hardwired me to outlast any challenge."
+      },
+      {
+        label: "Music",
+        text:  "Learning music and playing violin for four years has taught me several things. One lesson is the importance of endless patience and refinement in mastering anything. Secondly, participating in the bhajan group of my school revealed the significance of individual voices blending perfectly to form a harmonious group. It gives me the required balance as music complements my rational mindset. Headed many bhajan sessions in school times."
       },
       {
         label: "Photography",
-        text:  "Mostly skies, mostly at dusk, mostly from a rooftop in Chennai. Shot on a phone — the light does the work."
+        text:  "For me photography means freezing the neglected aspects of the fast paced environment around me. As I tend to find patterns among complex numbers and financial statements, similarly through photography, I can create images that capture both movement and tranquillity within a single shot. In photography, there is no need for any words rather images convey everything."
       }
     ],
     /* Masonry order — photos keep their own proportions. Add or remove freely;

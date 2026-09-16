@@ -177,17 +177,63 @@
     if (!o) return;
     set('offdutyLede', esc(o.lede));
 
+    // Update the witness button label from content
+    var btnLabel = document.getElementById('witnessBtnLabel');
+    if (btnLabel && o.witnessBtnLabel) btnLabel.textContent = o.witnessBtnLabel;
+
     set('strands', (o.strands || []).map(function (st) {
       return '<div class="strand"><p class="strand__label mono">' + esc(st.label) + '</p>' +
              '<p>' + esc(st.text) + '</p></div>';
     }).join(''));
 
+    // Render hidden mosaic (used by lightbox)
     set('mosaic', (o.gallery || []).map(function (g, i) {
       return '<button class="shot" data-shot="' + i + '" aria-label="View photo: ' + esc(g.caption) + '">' +
                '<img src="' + GAL + esc(g.src) + '_t.jpg" alt="' + esc(g.alt || g.caption) + '" loading="lazy" decoding="async">' +
                '<span class="shot__cap">' + esc(g.caption) + '</span>' +
              '</button>';
     }).join(''));
+
+    // Render inline gallery (2 per row, scrollable)
+    set('inGallery', (o.gallery || []).map(function (g, i) {
+      return '<button class="ingal__item" data-shot="' + i + '" aria-label="View: ' + esc(g.caption) + '">' +
+               '<img src="' + GAL + esc(g.src) + '_t.jpg" alt="' + esc(g.alt || g.caption) + '" loading="lazy" decoding="async">' +
+               '<span class="ingal__cap">' + esc(g.caption) + '</span>' +
+             '</button>';
+    }).join(''));
+  }
+
+  /* Flip card toggle — "Witness them" ↔ "← Back" */
+  function witnessFlip() {
+    var card  = document.getElementById('offdutyFlip');
+    var back  = card && card.querySelector('.flipcard__back');
+    var btnW  = document.getElementById('witnessBtn');
+    var btnB  = document.getElementById('galleryBackBtn');
+    var inGal = document.getElementById('inGallery');
+    if (!card || !btnW || !btnB) return;
+
+    btnW.addEventListener('click', function () {
+      card.classList.add('is-flipped');
+      if (back) back.removeAttribute('aria-hidden');
+      btnB.focus();
+    });
+
+    btnB.addEventListener('click', function () {
+      card.classList.remove('is-flipped');
+      if (back) back.setAttribute('aria-hidden', 'true');
+      btnW.focus();
+    });
+
+    // Inline gallery also opens lightbox
+    if (inGal) {
+      inGal.addEventListener('click', function (e) {
+        var btn = e.target.closest('[data-shot]');
+        if (btn) {
+          var mosaicBtn = document.querySelector('#mosaic [data-shot="' + btn.dataset.shot + '"]');
+          if (mosaicBtn) mosaicBtn.click();
+        }
+      });
+    }
   }
 
   /* Lightbox — click or keyboard, arrows to move, Escape to leave. */
@@ -615,6 +661,7 @@
     magnets();
     dial();
     lightbox();
+    witnessFlip();
     window.setTimeout(scramble, REDUCED ? 0 : 900);
   }
 

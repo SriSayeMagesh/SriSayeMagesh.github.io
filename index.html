@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sri Saye Magesh N — Portfolio</title>
+<meta name="description" content="Sri Saye Magesh N — MBA candidate at Great Lakes Chennai. Forty-three months in audit, AML transaction monitoring and corporate tax; strategy, risk and process optimisation.">
+<meta name="theme-color" content="#0A0E0C">
+<meta name="color-scheme" content="dark">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sri Saye Magesh N — Portfolio">
+<meta property="og:description" content="MBA candidate · Finance &amp; Strategy · Risk &amp; Compliance. Chennai, India.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230A0E0C'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%23FFA94D' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%232E9E5B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<!-- ══ BOOT SEQUENCE ══ -->
+<div class="boot" id="boot" role="status" aria-label="Loading">
+  <div class="boot__inner">
+    <svg class="boot__dial" viewBox="0 0 120 120" aria-hidden="true">
+      <circle class="boot__ring" cx="60" cy="60" r="46"/>
+      <circle class="boot__ring boot__ring--in" cx="60" cy="60" r="34"/>
+      <g class="boot__ticks" id="bootTicks"></g>
+      <circle class="boot__core" cx="60" cy="60" r="5"/>
+    </svg>
+    <p class="boot__label" id="bootLabel">INITIALISING</p>
+    <div class="boot__bar"><span id="bootBar"></span></div>
+  </div>
+</div>
+
+<!-- ══ CURSOR RETICLE ══ -->
+<div class="reticle" id="reticle" aria-hidden="true">
+  <span class="reticle__ring"></span>
+  <span class="reticle__dot"></span>
+</div>
+
+<!-- ══ SCROLL PROGRESS (tricolour) ══ -->
+<div class="railtrack" aria-hidden="true"><div class="railtrack__fill" id="railFill"></div></div>
+
+<a class="skiplink" href="#main">Skip to content</a>
+
+<!-- ══ NAVIGATION ══ -->
+<header class="nav" id="nav">
+  <div class="nav__wrap">
+    <a class="brand" href="#home" aria-label="Home">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 28 28"><circle cx="14" cy="14" r="11" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="14" cy="14" r="3.2" fill="currentColor"/><path d="M14 1v5M14 22v5M1 14h5M22 14h5" stroke="currentColor" stroke-width="1.5"/></svg>
+      </span>
+      <span class="brand__text">
+        <strong id="brandName">Sri Saye Magesh N</strong>
+        <em class="mono" id="brandRole">Portfolio</em>
+      </span>
+    </a>
+
+    <nav class="nav__links" id="navLinks" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#offduty">Off Duty</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ══ 00 · HERO ══ -->
+<section class="hero" id="home">
+  <canvas class="hero__canvas" id="radar" aria-hidden="true"></canvas>
+  <div class="hero__topo" aria-hidden="true"></div>
+  <div class="hero__scrim" aria-hidden="true"></div>
+
+  <div class="hero__inner wrap">
+    <p class="kicker" data-parallax="0.18"><span class="kicker__tri" aria-hidden="true"></span><span id="heroKicker">Discipline · Precision · Country</span></p>
+    <h1 class="hero__name" data-parallax="0.10"><span id="heroName">Sri Saye Magesh N</span></h1>
+    <p class="hero__role" data-parallax="0.06"><span id="heroRole" data-scramble>Professional Title</span></p>
+    <p class="hero__blurb" id="heroBlurb" data-parallax="0.04">One-line positioning statement goes here.</p>
+
+    <div class="hero__cta" data-parallax="0.02">
+      <a class="btn btn--solid magnet" href="#contact">Get in touch</a>
+      <a class="btn btn--ghost magnet" id="heroResume" href="#" target="_blank" rel="noopener">View résumé</a>
+    </div>
+
+    <dl class="hero__stats" id="heroStats"></dl>
+  </div>
+
+  <a class="hero__scroll" href="#about" aria-label="Scroll to About">
+    <span class="mono">SCROLL</span>
+    <span class="hero__scrollline" aria-hidden="true"></span>
+  </a>
+</section>
+
+<!-- ══ 01 · ABOUT ══ -->
+<section class="section" id="about">
+  <div class="wrap">
+    <header class="shead reveal">
+      <p class="shead__kick mono">01 / DOSSIER</p>
+      <h2 class="shead__title">About</h2>
+      <span class="shead__rule" aria-hidden="true"></span>
+    </header>
+
+    <div class="about">
+      <div class="about__body reveal">
+        <div id="aboutText"></div>
+        <ul class="taglist" id="aboutTags"></ul>
+      </div>
+
+      <aside class="card card--hud about__card reveal" aria-label="Profile summary">
+        <div class="hud__corner hud__corner--tl" aria-hidden="true"></div>
+        <div class="hud__corner hud__corner--tr" aria-hidden="true"></div>
+        <div class="hud__corner hud__corner--bl" aria-hidden="true"></div>
+        <div class="hud__corner hud__corner--br" aria-hidden="true"></div>
+        <div class="about__portrait" id="aboutPortrait">
+          <span class="mono">PHOTO</span>
+        </div>
+        <dl class="datalist" id="aboutFacts"></dl>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 02 · SKILLS ══ -->
+<section class="section section--alt" id="skills">
+  <div class="wrap">
+    <header class="shead reveal">
+      <p class="shead__kick mono">02 / CAPABILITIES</p>
+      <h2 class="shead__title">Skills</h2>
+      <span class="shead__rule" aria-hidden="true"></span>
+    </header>
+    <div class="skills" id="skillsGrid"></div>
+  </div>
+</section>
+
+<!-- ══ 03 · EXPERIENCE ══ -->
+<section class="section" id="experience">
+  <div class="wrap">
+    <header class="shead reveal">
+      <p class="shead__kick mono">03 / TRACK RECORD</p>
+      <h2 class="shead__title">Experience</h2>
+      <span class="shead__rule" aria-hidden="true"></span>
+    </header>
+    <ol class="timeline" id="timeline"></ol>
+  </div>
+</section>
+
+<!-- ══ 04 · PROJECTS ══ -->
+<section class="section section--alt" id="projects">
+  <div class="wrap">
+    <header class="shead reveal">
+      <p class="shead__kick mono">04 / OPERATIONS</p>
+      <h2 class="shead__title">Projects</h2>
+      <span class="shead__rule" aria-hidden="true"></span>
+    </header>
+    <div class="filters" id="projectFilters" role="group" aria-label="Filter projects"></div>
+    <div class="projects" id="projectGrid"></div>
+  </div>
+</section>
+
+<!-- ══ 05 · EDUCATION ══ -->
+<section class="section" id="education">
+  <div class="wrap">
+    <header class="shead reveal">
+      <p class="shead__kick mono">05 / TRAINING</p>
+      <h2 class="shead__title">Education &amp; Certifications</h2>
+      <span class="shead__rule" aria-hidden="true"></span>
+    </header>
+    <div class="edu" id="eduGrid"></div>
+  </div>
+</section>
+
+<!-- ══ 06 · ACHIEVEMENTS ══ -->
+<section class="section section--alt" id="achievements">
+  <div class="wrap">
+    <header class="shead reveal">
+      <p class="shead__kick mono">06 / COMMENDATIONS</p>
+      <h2 class="shead__title">Achievements</h2>
+      <span class="shead__rule" aria-hidden="true"></span>
+    </header>
+    <div class="awards" id="awardGrid"></div>
+  </div>
+</section>
+
+<!-- ══ 07 · OFF DUTY ══ -->
+<section class="section" id="offduty">
+  <div class="wrap">
+    <header class="shead reveal">
+      <p class="shead__kick mono">07 / OFF DUTY</p>
+      <h2 class="shead__title">Beyond the desk</h2>
+      <span class="shead__rule" aria-hidden="true"></span>
+    </header>
+    <p class="offduty__lede reveal" id="offdutyLede"></p>
+    <div class="strands reveal" id="strands"></div>
+    <div class="mosaic" id="mosaic"></div>
+  </div>
+</section>
+
+<!-- ══ 08 · CONTACT ══ -->
+<section class="section section--contact" id="contact">
+  <div class="dial" aria-hidden="true">
+    <svg viewBox="0 0 240 240" id="chakraDial">
+      <circle cx="120" cy="120" r="104" class="dial__ring"/>
+      <circle cx="120" cy="120" r="86" class="dial__ring dial__ring--thin"/>
+      <g id="dialTicks"></g>
+      <circle cx="120" cy="120" r="8" class="dial__core"/>
+    </svg>
+  </div>
+  <div class="wrap">
+    <header class="shead shead--center reveal">
+      <p class="shead__kick mono">08 / SIGNAL</p>
+      <h2 class="shead__title">Get in touch</h2>
+      <span class="shead__rule" aria-hidden="true"></span>
+    </header>
+    <p class="contact__lede reveal" id="contactLede"></p>
+    <div class="contact__actions reveal" id="contactActions"></div>
+    <ul class="contact__meta reveal" id="contactMeta"></ul>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__wrap">
+    <p class="foot__copy">© <span id="year"></span> <span id="footName">Sri Saye Magesh N</span>. All rights reserved.</p>
+    <p class="foot__tri" aria-hidden="true"><span></span><span></span><span></span></p>
+    <ul class="foot__links" id="footLinks"></ul>
+  </div>
+</footer>
+
+<button class="totop" id="toTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<div class="draftchip mono" id="draftChip" hidden>DRAFT BUILD · CONTENT PENDING</div>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+  <button class="lightbox__btn lightbox__close" id="lbClose" aria-label="Close viewer">&times;</button>
+  <button class="lightbox__btn lightbox__prev"  id="lbPrev"  aria-label="Previous photo">&#8249;</button>
+  <figure class="lightbox__fig">
+    <img id="lbImg" alt="">
+    <figcaption class="mono" id="lbCap"></figcaption>
+  </figure>
+  <button class="lightbox__btn lightbox__next"  id="lbNext"  aria-label="Next photo">&#8250;</button>
+</div>
+
+<script src="assets/js/content.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

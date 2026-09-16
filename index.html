@@ -201,33 +201,8 @@
       <span class="shead__rule" aria-hidden="true"></span>
     </header>
     <p class="offduty__lede reveal" id="offdutyLede"></p>
-
-    <!-- Flip card wrapper -->
-    <div class="flipcard" id="offdutyFlip">
-      <!-- FRONT: text strands -->
-      <div class="flipcard__face flipcard__front">
-        <div class="strands" id="strands"></div>
-        <div class="flipcard__footer">
-          <button class="btn btn--solid witness-btn magnet" id="witnessBtn" aria-label="View photo gallery">
-            <span id="witnessBtnLabel">Witness them</span>
-            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 10a7 7 0 1 0 14 0A7 7 0 0 0 3 10Zm7-2.5v5m-2.5-2.5h5"/></svg>
-          </button>
-        </div>
-      </div>
-
-      <!-- BACK: gallery grid -->
-      <div class="flipcard__face flipcard__back" aria-hidden="true">
-        <div class="ingallery" id="inGallery"></div>
-        <div class="flipcard__footer">
-          <button class="btn btn--ghost magnet" id="galleryBackBtn" aria-label="Back to text">
-            ← Back
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- keep the mosaic hidden (lightbox still uses it) -->
-    <div class="mosaic visually-hidden" id="mosaic" aria-hidden="true"></div>
+    <!-- 5 individual flip cards rendered here by main.js -->
+    <div class="strands-grid" id="strandsGrid"></div>
   </div>
 </section>
 

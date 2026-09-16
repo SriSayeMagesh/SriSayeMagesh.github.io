@@ -558,111 +558,139 @@ button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; 
   .lightbox__next{ position:absolute; right:var(--s-3); bottom:var(--s-4); }
 }
 
-/* ── 23. FLIP CARD (Beyond the desk) ───────────────────────────────────── */
-.visually-hidden{
-  position:absolute; width:1px; height:1px; padding:0; margin:-1px;
-  overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
+/* ── 23. STRAND CARDS GRID (Beyond the desk) ───────────────────────────── */
+.strands-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));
+  gap:var(--s-5);
+  margin-top:var(--s-4);
 }
 
-.flipcard{
+/* Each strand card is its own flip container */
+.strand-card{
   position:relative;
-  width:100%;
-  perspective:1400px;
+  perspective:1200px;
+  padding:var(--s-5);
+  display:flex;
+  flex-direction:column;
 }
 
-.flipcard__face{
+/* Flip faces */
+.strand-card .flipcard__face{
   width:100%;
   backface-visibility:hidden;
   -webkit-backface-visibility:hidden;
-  transition:transform .65s cubic-bezier(.4,0,.2,1), opacity .4s;
+  transition:transform .6s cubic-bezier(.4,0,.2,1), opacity .35s;
+  display:flex;
+  flex-direction:column;
+  flex:1;
 }
-
-/* Front sits in normal flow; back is overlaid via position:absolute */
-.flipcard__front{
+.strand-card .flipcard__front{
   transform:rotateY(0deg);
   opacity:1;
 }
-.flipcard__back{
+.strand-card .flipcard__back{
   position:absolute;
-  top:0; left:0; right:0;
+  inset:var(--s-5);          /* match card padding */
   transform:rotateY(180deg);
   opacity:0;
   pointer-events:none;
+  display:flex;
+  flex-direction:column;
 }
 
-/* Flipped state */
-.flipcard.is-flipped .flipcard__front{
+/* Flipped state — front hides, back comes into flow */
+.strand-card.is-flipped .flipcard__front{
   transform:rotateY(-180deg);
   opacity:0;
   pointer-events:none;
 }
-.flipcard.is-flipped .flipcard__back{
+.strand-card.is-flipped .flipcard__back{
+  position:relative;
+  inset:auto;
   transform:rotateY(0deg);
   opacity:1;
   pointer-events:auto;
-  position:relative;   /* back to flow so section grows to fit */
 }
 
-/* Footer row inside each face */
+/* strand text inside front */
+.strand__text{
+  color:var(--ink-muted);
+  font-size:var(--t-14);
+  line-height:1.65;
+  flex:1;
+  margin:var(--s-3) 0 0;
+}
+
+/* Footer row (button row) */
 .flipcard__footer{
   display:flex;
   justify-content:flex-end;
   padding-top:var(--s-4);
-  margin-top:var(--s-2);
+  margin-top:var(--s-3);
   border-top:1px solid var(--rule-soft);
 }
 
-/* "Witness them" button tweak */
+/* "Witness them" icon */
 .witness-btn svg{
-  width:1em; height:1em; margin-left:.45em; vertical-align:-.13em;
+  width:1em; height:1em;
+  margin-left:.4em;
+  vertical-align:-.12em;
 }
 
-/* ── 24. INLINE GALLERY (back face) ──────────────────────────────────────── */
+/* ── 24. INLINE GALLERY (back face of each strand card) ─────────────────── */
 .ingallery{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:var(--s-3);
-  max-height:520px;
+  gap:var(--s-2);
+  flex:1;
+  max-height:340px;
   overflow-y:auto;
-  padding-right:var(--s-1);           /* room for scrollbar */
+  padding-right:2px;
   scrollbar-width:thin;
   scrollbar-color:var(--saffron) var(--surface-2);
 }
-.ingallery::-webkit-scrollbar{ width:4px; }
+.ingallery::-webkit-scrollbar{ width:3px; }
 .ingallery::-webkit-scrollbar-track{ background:var(--surface-2); border-radius:2px; }
 .ingallery::-webkit-scrollbar-thumb{ background:var(--saffron); border-radius:2px; }
 
 .ingal__item{
-  position:relative; display:block; padding:0; border:none;
-  border-radius:4px; overflow:hidden;
+  display:block; padding:0;
+  border-radius:3px; overflow:hidden;
   border:1px solid var(--rule-soft);
   background:var(--surface-2);
   cursor:pointer; line-height:0;
-  transition:border-color .3s, transform .25s;
+  transition:border-color .25s, transform .2s;
 }
 .ingal__item:hover,.ingal__item:focus-visible{
   border-color:var(--saffron);
-  transform:scale(1.025);
+  transform:scale(1.03);
   outline:2px solid var(--saffron);
   outline-offset:2px;
 }
 .ingal__item img{
   width:100%; aspect-ratio:4/3; object-fit:cover; display:block;
   filter:saturate(.9) brightness(.93);
-  transition:filter .35s;
+  transition:filter .3s;
 }
 .ingal__item:hover img,.ingal__item:focus-visible img{
   filter:saturate(1) brightness(1);
 }
 .ingal__cap{
   display:block;
-  padding:var(--s-2) var(--s-2) var(--s-2);
-  font-family:var(--mono); font-size:10px; letter-spacing:.1em;
-  text-transform:uppercase; color:var(--ink-muted); text-align:left;
-  line-height:1.3;
+  padding:4px 6px 5px;
+  font-family:var(--mono); font-size:9px; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--ink-muted); line-height:1.3;
+}
+.ingal__empty{
+  grid-column:1/-1;
+  color:var(--ink-muted);
+  font-size:var(--t-14);
+  font-style:italic;
+  padding:var(--s-4) 0;
 }
 
-@media (max-width:560px){
-  .ingallery{ grid-template-columns:1fr; max-height:420px; }
+@media (max-width:600px){
+  .strands-grid{ grid-template-columns:1fr; }
+  .ingallery{ max-height:280px; }
 }
-

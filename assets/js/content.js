@@ -201,43 +201,56 @@ window.CONTENT = {
   ],
 
   /* ── 07 · Off duty ──────────────────────────────────────────────────── */
+  /* HOW TO ADD PHOTOS:
+     1. Drop <name>.jpg and <name>_t.jpg into the correct subfolder in
+        assets/img/gallery/<galleryFolder>/
+     2. Tell Antigravity "add images for <strand label>" and it will scan
+        the folder and append the entries below automatically.              */
   offDuty: {
     lede: "Five dimensions beyond the spreadsheet — defence, stage, sport, music, and a lens — that shaped how I lead, compete, and create.",
-    witnessBtnLabel: "Witness them",
     strands: [
       {
         label: "Defence & NCC",
-        text:  "Being the CSM of 105 Cadets in National Cadet Corps inducted me in Defence. This experience culminated into being selected for Singapore Youth Exchange Program 2020. Reaching till level 3 in Army SSB Conference after 5 attempts and winning DGV College's mock SSB organised by real colonels, has made sure my innate ability to Lead under pressure has been proved multiple times."
+        galleryFolder: "defence_ncc",
+        text: "Being the CSM of 105 Cadets in National Cadet Corps inducted me in Defence. This experience culminated into being selected for Singapore Youth Exchange Program 2020. Reaching till level 3 in Army SSB Conference after 5 attempts and winning DGV College's mock SSB organised by real colonels, has made sure my innate ability to Lead under pressure has been proved multiple times.",
+        gallery: [
+          { src: "ncc_guard",    caption: "Guard duty · NCC",      alt: "Sri Saye Magesh in NCC uniform on guard duty" },
+          { src: "ncc_portrait", caption: "Company Sergeant Major", alt: "Formal portrait in NCC uniform" },
+          { src: "ncc_cadets",   caption: "The company · NCC",      alt: "Group of NCC cadets in uniform" }
+        ]
       },
       {
         label: "Extracurricular",
-        text:  "Having been always an 'Yes Man' at school I have won more than 80 awards in diverse fields like elocution, acting, paintings, singing. Additionally being a President of annual drama club of my college provided ample exposure which helped in building creativity and adaptability and also made me curious learner throughout my life span."
+        galleryFolder: "extracurricular",
+        text: "Having been always an 'Yes Man' at school I have won more than 80 awards in diverse fields like elocution, acting, paintings, singing. Additionally being a President of annual drama club of my college provided ample exposure which helped in building creativity and adaptability and also made me curious learner throughout my life span.",
+        gallery: []
       },
       {
         label: "Sports",
-        text:  "I actively play multiple sports like badminton, Cycling and cricket to stay agile and team-oriented, but my core competitive drive lies in state-level Table Tennis and Long Distance Running. Table Tennis trained my split-second decision-making, while long-distance running taught me profound resilience. Beyond competition, prioritizing daily health and fitness is a non-negotiable that keeps my mind sharp under pressure. Whether on the pitch, the table, or the road, sports have hardwired me to outlast any challenge."
+        galleryFolder: "sports",
+        text: "I actively play multiple sports like badminton, Cycling and cricket to stay agile and team-oriented, but my core competitive drive lies in state-level Table Tennis and Long Distance Running. Table Tennis trained my split-second decision-making, while long-distance running taught me profound resilience. Beyond competition, prioritizing daily health and fitness is a non-negotiable that keeps my mind sharp under pressure. Whether on the pitch, the table, or the road, sports have hardwired me to outlast any challenge.",
+        gallery: [
+          { src: "sport_trophy", caption: "Long distance", alt: "Running trophy topped with a sprinting figure" }
+        ]
       },
       {
         label: "Music",
-        text:  "Learning music and playing violin for four years has taught me several things. One lesson is the importance of endless patience and refinement in mastering anything. Secondly, participating in the bhajan group of my school revealed the significance of individual voices blending perfectly to form a harmonious group. It gives me the required balance as music complements my rational mindset. Headed many bhajan sessions in school times."
+        galleryFolder: "music",
+        text: "Learning music and playing violin for four years has taught me several things. One lesson is the importance of endless patience and refinement in mastering anything. Secondly, participating in the bhajan group of my school revealed the significance of individual voices blending perfectly to form a harmonious group. It gives me the required balance as music complements my rational mindset. Headed many bhajan sessions in school times.",
+        gallery: []
       },
       {
         label: "Photography",
-        text:  "For me photography means freezing the neglected aspects of the fast paced environment around me. As I tend to find patterns among complex numbers and financial statements, similarly through photography, I can create images that capture both movement and tranquillity within a single shot. In photography, there is no need for any words rather images convey everything."
+        galleryFolder: "photography",
+        text: "For me photography means freezing the neglected aspects of the fast paced environment around me. As I tend to find patterns among complex numbers and financial statements, similarly through photography, I can create images that capture both movement and tranquillity within a single shot. In photography, there is no need for any words rather images convey everything.",
+        gallery: [
+          { src: "photo_palm_sunset",  caption: "Sundown through the palms", alt: "Sun setting behind coconut palms" },
+          { src: "photo_storm_cloud",  caption: "Anvil cloud building",       alt: "A towering storm cloud over rooftops at dusk" },
+          { src: "photo_rooftop_dusk", caption: "Rooftop, last light",        alt: "Silhouette on a rooftop against the setting sun" },
+          { src: "photo_night_bloom",  caption: "Night-blooming cereus",      alt: "A white night-blooming cereus flower" },
+          { src: "photo_skyline_dusk", caption: "Chennai skyline at dusk",    alt: "Wide view of Chennai skyline at dusk" }
+        ]
       }
-    ],
-    /* Masonry order — photos keep their own proportions. Add or remove freely;
-       each needs <src>.jpg and <src>_t.jpg in assets/img/gallery/. */
-    gallery: [
-      { src: "ncc_guard",   caption: "Guard duty · NCC",            alt: "Sri Saye Magesh in NCC uniform on guard duty, rifle at his side" },
-      { src: "ncc_portrait", caption: "Company Sergeant Major",      alt: "Formal portrait in NCC uniform" },
-      { src: "photo_palm_sunset", caption: "Sundown through the palms",   alt: "Sun setting behind coconut palms" },
-      { src: "photo_storm_cloud", caption: "Anvil cloud building",        alt: "A towering storm cloud over rooftops at dusk" },
-      { src: "photo_rooftop_dusk", caption: "Rooftop, last light",         alt: "Silhouette of a figure on a rooftop against the setting sun" },
-      { src: "sport_trophy", caption: "Long distance",               alt: "Running trophy topped with a sprinting figure" },
-      { src: "ncc_cadets",  caption: "The company · NCC",           alt: "Group of NCC cadets in uniform" },
-      { src: "photo_night_bloom", caption: "Night-blooming cereus",       alt: "A white night-blooming cereus flower against darkness" },
-      { src: "photo_skyline_dusk", caption: "Chennai skyline at dusk",     alt: "Wide view of the Chennai skyline at dusk with layered cloud" }
     ]
   },
 

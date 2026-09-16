@@ -11,10 +11,10 @@
   header a{color:#FFA94D;text-decoration:none;font-size:.85rem;letter-spacing:.1em}
   h1{font-size:1.1rem;margin-top:.5rem;color:#fff}
   p.sub{font-size:.8rem;color:#7a8f7e;margin-top:.25rem}
-  #gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem;padding:2rem}
-  .img-card{border-radius:4px;overflow:hidden;border:1px solid #1e2a22;background:#111;cursor:pointer;transition:border-color .2s}
+  #gallery{columns:3 260px;column-gap:1rem;padding:2rem}
+  .img-card{break-inside:avoid;-webkit-column-break-inside:avoid;margin-bottom:1rem;border-radius:4px;overflow:hidden;border:1px solid #1e2a22;background:#111;cursor:pointer;transition:border-color .2s}
   .img-card:hover{border-color:#FFA94D}
-  .img-card img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;filter:brightness(.9);transition:filter .3s}
+  .img-card img{width:100%;height:auto;display:block;filter:brightness(.9);transition:filter .3s}
   .img-card:hover img{filter:brightness(1)}
   .img-card span{display:block;padding:6px 10px;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:#7a8f7e}
   #empty{padding:4rem 2rem;text-align:center;color:#7a8f7e;font-style:italic}

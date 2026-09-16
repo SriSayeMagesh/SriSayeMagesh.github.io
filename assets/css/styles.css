@@ -640,13 +640,13 @@ button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; 
 
 /* ── 24. INLINE GALLERY (back face of each strand card) ─────────────────── */
 .ingallery{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:var(--s-2);
+  display:block;
+  columns:2 120px;
+  column-gap:var(--s-2);
   flex:1;
   max-height:340px;
   overflow-y:auto;
-  padding-right:2px;
+  padding-right:4px;
   scrollbar-width:thin;
   scrollbar-color:var(--saffron) var(--surface-2);
 }
@@ -656,20 +656,25 @@ button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; 
 
 .ingal__item{
   display:block; padding:0;
+  margin-bottom:var(--s-2);
+  break-inside:avoid;
+  -webkit-column-break-inside:avoid;
   border-radius:3px; overflow:hidden;
   border:1px solid var(--rule-soft);
   background:var(--surface-2);
   cursor:pointer; line-height:0;
   transition:border-color .25s, transform .2s;
+  width:100%;
 }
 .ingal__item:hover,.ingal__item:focus-visible{
   border-color:var(--saffron);
   transform:scale(1.03);
   outline:2px solid var(--saffron);
   outline-offset:2px;
+  position:relative; z-index:2;
 }
 .ingal__item img{
-  width:100%; aspect-ratio:4/3; object-fit:cover; display:block;
+  width:100%; height:auto; display:block;
   filter:saturate(.9) brightness(.93);
   transition:filter .3s;
 }

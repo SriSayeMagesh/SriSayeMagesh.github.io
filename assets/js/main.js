@@ -67,18 +67,14 @@
 
   function renderSkills() {
     set('skillsGrid', (C.skills || []).map(function (g) {
-      var meters = (g.items || []).map(function (s) {
-        var lv = Math.max(0, Math.min(100, Number(s.level) || 0));
-        return '<div class="meter">' +
-                 '<div class="meter__top"><span class="meter__name">' + esc(s.name) + '</span>' +
-                 '<span class="meter__val">' + lv + '%</span></div>' +
-                 '<div class="meter__track" role="img" aria-label="' + esc(s.name) + ': ' + lv + ' out of 100">' +
-                   '<div class="meter__fill" data-level="' + lv + '"></div>' +
-                 '</div>' +
-               '</div>';
+      var items = (g.items || []).map(function (s) {
+        return '<li style="margin-bottom:0.75rem; color:var(--ink); font-size:var(--t-14); display:flex; align-items:start; gap:0.5rem;">' +
+               '<span style="color:var(--saffron); line-height:1.5;">▹</span>' + 
+               '<span style="line-height:1.5;">' + esc(s.name) + '</span></li>';
       }).join('');
-      return '<article class="card card--hud skillcard reveal">' + hud() +
-               '<h3>' + esc(g.group) + '</h3>' + meters + '</article>';
+      return '<article class="card card--hud skillcard reveal" style="max-width:400px; width:100%; margin: 0 auto;">' + hud() +
+               '<h3>' + esc(g.group) + '</h3>' + 
+               '<ul style="list-style:none; padding:0; margin:0;">' + items + '</ul></article>';
     }).join(''));
   }
 

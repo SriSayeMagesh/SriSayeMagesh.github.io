@@ -1,4 +1,4 @@
-/* ==========================================================================
+﻿/* ==========================================================================
    content.js — EVERY piece of text on the site lives here.
    Edit this file only; never touch main.js to change wording.
    Set  draft: false  once Sri Saye has approved the copy.
@@ -10,8 +10,8 @@ window.CONTENT = {
 
   /* ── Identity ───────────────────────────────────────────────────────── */
   name:   "Sri Saye Magesh N",
-  kicker: "Patience · Perseverance · Dedication",
-  role:   "Strong Finance Background · Consulting and Finance Major · Risk & Compliance",
+  kicker: "� Patience � Perseverance � Dedication",
+  role:   "� Strong Finance Background � Consulting and Finance Major � Risk & Compliance",
   roleShort: "Finance · Strategy · Risk",   // short form used in the nav lockup
   blurb:  "Forty-three months across statutory audit, AML transaction monitoring and UK corporate tax. Now reading for an MBA at Great Lakes Chennai, working on strategy, capital allocation and go-to-market.",
   resume: "assets/docs/resume_sri_saye_magesh_n.pdf",

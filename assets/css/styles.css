@@ -639,20 +639,26 @@ button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; 
 }
 
 /* ── 24. INLINE GALLERY (back face of each strand card) ─────────────────── */
-.ingallery{
-  display:block;
-  columns:2 120px;
-  column-gap:var(--s-2);
+.ingallery-scroll {
   flex:1;
   max-height:340px;
   overflow-y:auto;
+  overflow-x:hidden;
   padding-right:4px;
   scrollbar-width:thin;
   scrollbar-color:var(--saffron) var(--surface-2);
+  display:block;
 }
-.ingallery::-webkit-scrollbar{ width:3px; }
-.ingallery::-webkit-scrollbar-track{ background:var(--surface-2); border-radius:2px; }
-.ingallery::-webkit-scrollbar-thumb{ background:var(--saffron); border-radius:2px; }
+.ingallery-scroll::-webkit-scrollbar{ width:3px; }
+.ingallery-scroll::-webkit-scrollbar-track{ background:var(--surface-2); border-radius:2px; }
+.ingallery-scroll::-webkit-scrollbar-thumb{ background:var(--saffron); border-radius:2px; }
+
+.ingallery-masonry {
+  display:block;
+  columns:2 120px;
+  column-gap:var(--s-2);
+  width:100%;
+}
 
 .ingal__item{
   display:block; padding:0;

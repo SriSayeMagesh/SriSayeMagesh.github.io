@@ -216,7 +216,7 @@
                // ── BACK ──
                '<div class="flipcard__face flipcard__back" aria-hidden="true">' +
                  '<p class="strand__label mono">' + esc(st.label) + ' &mdash; Gallery</p>' +
-                 '<div class="ingallery">' + galHtml + '</div>' +
+                 '<div class="ingallery-scroll"><div class="ingallery-masonry">' + galHtml + '</div></div>' +
                  '<div class="flipcard__footer">' +
                    '<button class="btn btn--ghost magnet strand-back"' +
                    ' data-strand="' + idx + '" aria-label="Back to ' + esc(st.label) + '">&#8592; Back</button>' +

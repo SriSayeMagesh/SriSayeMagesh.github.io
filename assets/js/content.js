@@ -202,6 +202,7 @@ window.CONTENT = {
     { figure: "3/5",  title: "SSB Conference-Outs",      note: "Three conference-outs across five Services Selection Boards attended to date." },
     { figure: "100+", title: "Cadets Commanded",         note: "Company Sergeant Major, NCC · Ramakrishna Mission Vivekananda College · 2021–22." },
     { figure: "YEP",  title: "Youth Exchange Programme", note: "Qualified for the NCC Youth Exchange Programme to Singapore, 2020." },
+    { figure: "1st",   title: "Table Tennis",             note: "Inter-company champion representing NatWest, 2022. Multiple state and district-level titles." },
     { figure: "State", title: "Table Tennis",             note: "Represented the district in state-level table tennis for 9 consecutive years and won various prizes in individual events." },
     { figure: "Won",   title: "Long Distance Running",    note: "Won prizes in long distance events, including participating and winning in various marathons." },
     { figure: "Prize", title: "Paper Presentation",      note: "Prize-winner, Digitisation of India · DG Vaishnav College, Chennai." }

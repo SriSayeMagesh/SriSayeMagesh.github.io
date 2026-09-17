@@ -577,40 +577,40 @@ button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; 
   padding:var(--s-5);
   display:flex;
   flex-direction:column;
-  min-height:360px;
 }
 
-/* Flip faces — BOTH are absolute so neither pushes the card size */
-.strand-card .flipcard__face{
-  position:absolute;
-  inset:var(--s-5);
-  backface-visibility:hidden;
-  -webkit-backface-visibility:hidden;
-  transition:transform .6s cubic-bezier(.4,0,.2,1), opacity .35s;
+/* Front face stays in normal flow — it sizes the card */
+.strand-card .flipcard__front{
   display:flex;
   flex-direction:column;
-  overflow:hidden;
+  flex:1;
+  transition:opacity .4s, visibility 0s .0s;
 }
-.strand-card .flipcard__front{
-  transform:rotateY(0deg);
-  opacity:1;
-}
+
+/* Back face is always absolute — overlays on top */
 .strand-card .flipcard__back{
-  transform:rotateY(180deg);
+  position:absolute;
+  inset:var(--s-5);
+  display:flex;
+  flex-direction:column;
   opacity:0;
+  visibility:hidden;
   pointer-events:none;
+  transition:opacity .4s, visibility 0s .4s;
 }
 
 /* Flipped state */
 .strand-card.is-flipped .flipcard__front{
-  transform:rotateY(-180deg);
   opacity:0;
+  visibility:hidden;
   pointer-events:none;
+  transition:opacity .4s, visibility 0s .4s;
 }
 .strand-card.is-flipped .flipcard__back{
-  transform:rotateY(0deg);
   opacity:1;
+  visibility:visible;
   pointer-events:auto;
+  transition:opacity .4s, visibility 0s .0s;
 }
 
 /* strand text inside front */

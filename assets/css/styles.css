@@ -577,41 +577,37 @@ button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; 
   padding:var(--s-5);
   display:flex;
   flex-direction:column;
+  min-height:360px;
 }
 
-/* Flip faces */
+/* Flip faces — BOTH are absolute so neither pushes the card size */
 .strand-card .flipcard__face{
-  width:100%;
+  position:absolute;
+  inset:var(--s-5);
   backface-visibility:hidden;
   -webkit-backface-visibility:hidden;
   transition:transform .6s cubic-bezier(.4,0,.2,1), opacity .35s;
   display:flex;
   flex-direction:column;
-  flex:1;
+  overflow:hidden;
 }
 .strand-card .flipcard__front{
   transform:rotateY(0deg);
   opacity:1;
 }
 .strand-card .flipcard__back{
-  position:absolute;
-  inset:var(--s-5);          /* match card padding */
   transform:rotateY(180deg);
   opacity:0;
   pointer-events:none;
-  display:flex;
-  flex-direction:column;
 }
 
-/* Flipped state — front hides, back comes into flow */
+/* Flipped state */
 .strand-card.is-flipped .flipcard__front{
   transform:rotateY(-180deg);
   opacity:0;
   pointer-events:none;
 }
 .strand-card.is-flipped .flipcard__back{
-  position:relative;
-  inset:auto;
   transform:rotateY(0deg);
   opacity:1;
   pointer-events:auto;
@@ -645,7 +641,7 @@ button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; 
 /* ── 24. INLINE GALLERY (back face of each strand card) ─────────────────── */
 .ingallery-scroll {
   flex:1;
-  max-height:340px;
+  /* removed max-height for flex */
   overflow-y:auto;
   overflow-x:hidden;
   padding-right:4px;

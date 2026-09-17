@@ -13,7 +13,7 @@ window.CONTENT = {
   kicker: "� Patience � Perseverance � Dedication",
   role:   "� Strong Finance Background � Consulting and Finance Major � Risk & Compliance",
   roleShort: "Finance · Strategy · Risk",   // short form used in the nav lockup
-  blurb:  "Forty-three months across statutory audit, AML transaction monitoring and UK corporate tax. Now reading for an MBA at Great Lakes Chennai, working on strategy, capital allocation and go-to-market.",
+  blurb:  "MBA candidate with experience across Corporate Banking Operations, Transaction Filtering, Taxation, and Financial Auditing, with strong exposure to high-volume, high-risk financial processes. Analytical and detail-oriented professional skilled in identifying process gaps, improving operational efficiency, and maintaining accuracy in risk-sensitive environments. Combines financial knowledge, problem-solving, and stakeholder management skills with a strong interest in Credit, Portfolio Management, and Investment Analysis.",
   resume: "assets/docs/resume_sri_saye_magesh_n.pdf",
 
   stats: [

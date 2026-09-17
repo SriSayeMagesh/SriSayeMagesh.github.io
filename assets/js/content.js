@@ -1,4 +1,4 @@
-﻿/* ==========================================================================
+/* ==========================================================================
    content.js — EVERY piece of text on the site lives here.
    Edit this file only; never touch main.js to change wording.
    Set  draft: false  once Sri Saye has approved the copy.
@@ -51,30 +51,23 @@ window.CONTENT = {
   /* ── 02 · Skills ────────────────────────────────────────────────────── */
   skills: [
     {
-      group: "Risk & compliance",
+      group: "Core Competencies",
       items: [
         { name: "Risk mitigation & internal controls", level: 90 },
-        { name: "AML transaction monitoring",          level: 88 },
-        { name: "Statutory & tax audit",               level: 85 },
-        { name: "Regulatory reporting",                level: 75 }
+        { name: "Problem solving & structured thinking", level: 90 },
+        { name: "Financial analysis & quant modelling", level: 85 },
+        { name: "Cycle-time optimization", level: 85 },
+        { name: "Client relationship management", level: 80 }
       ]
     },
     {
-      group: "Finance & analysis",
+      group: "Tools & Software",
       items: [
-        { name: "Financial statement analysis", level: 85 },
-        { name: "Cash flow & DCF modelling",    level: 80 },
-        { name: "Unit economics",               level: 78 },
-        { name: "Quantitative modelling",       level: 72 }
-      ]
-    },
-    {
-      group: "Strategy & delivery",
-      items: [
-        { name: "Process & cycle-time optimisation", level: 90 },
-        { name: "Structured problem solving",        level: 85 },
-        { name: "Client & stakeholder management",   level: 85 },
-        { name: "Go-to-market strategy",             level: 72 }
+        { name: "MS Office", level: 95 },
+        { name: "Tally", level: 85 },
+        { name: "Odoo ERP", level: 80 },
+        { name: "Tableau", level: 75 },
+        { name: "Bizagi Modular (Basics)", level: 65 }
       ]
     }
   ],
@@ -202,7 +195,7 @@ window.CONTENT = {
     { figure: "3/5",  title: "SSB Conference-Outs",      note: "Three conference-outs across five Services Selection Boards attended to date." },
     { figure: "100+", title: "Cadets Commanded",         note: "Company Sergeant Major, NCC · Ramakrishna Mission Vivekananda College · 2021–22." },
     { figure: "YEP",  title: "Youth Exchange Programme", note: "Qualified for the NCC Youth Exchange Programme to Singapore, 2020." },
-    { figure: "1st",   title: "Table Tennis",             note: "Inter-company champion representing NatWest, 2022. Multiple state and district-level titles." },
+    { figure: "1st",   title: "Table Tennis",             note: "Won 1st in Intra and Inter company Table Tennis Tournament representing NatWest Group." },
     { figure: "State", title: "Table Tennis",             note: "Represented the district in state-level table tennis for 9 consecutive years and won various prizes in individual events." },
     { figure: "Won",   title: "Long Distance Running",    note: "Won prizes in long distance events, including participating and winning in various marathons." },
     { figure: "Prize", title: "Paper Presentation",      note: "Prize-winner, Digitisation of India · DG Vaishnav College, Chennai." }

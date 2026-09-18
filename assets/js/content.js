@@ -159,6 +159,13 @@ window.CONTENT = {
       description: "Built a reusable Discounted Cash Flow (DCF) valuation model using Arvind Fashions Ltd. as the base case, integrating historical financials, operating assumptions, WACC, free cash flow projections, terminal value, and sensitivity analysis. Designed the model with structured assumptions and linked calculations, enabling it to be adapted efficiently for valuing other companies while maintaining consistency, flexibility, and analytical rigour.",
       stack:    ["DCF Valuation", "Financial Modelling", "WACC", "Sensitivity Analysis", "Excel"],
       links:    [{ label: "Model", url: "assets/docs/reusable_dcf_model.xlsx" }]
+    },
+    {
+      title:    "DeepNav Smart - AI Energy Supply-Chain Resilience Platform",
+      category: "AI & Product",
+      description: "Developed an AI-driven energy supply-chain resilience platform for the ET Hackathon, focused on strengthening oil-import security through real-time tanker fleet intelligence, maritime corridor monitoring, and risk assessment. Built a decision-support solution to improve visibility into vessel movements, identify potential supply disruptions, and enable proactive responses to emerging logistical and geopolitical risks across critical energy corridors.",
+      stack:    ["AI", "Supply Chain", "Risk Assessment", "Maritime Intelligence", "Geopolitical Analysis"],
+      links:    [{ label: "Site", url: "https://deep-nav-smart.lovable.app/" }]
     }
   ],
 

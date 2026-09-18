@@ -137,7 +137,7 @@ window.CONTENT = {
       category: "Finance",
       description: "A three-year comparative study of cash generation quality across FY2024–FY2026, covering operating cash flow, investing and financing activity, free cash flow, capital expenditure and closing cash. Assessed FCF conversion, OCF-to-capex efficiency and reinvestment intensity to judge which company can fund its own growth.",
       stack:    ["Cash flow analysis", "Ratio analysis", "Comparative benchmarking", "Excel"],
-      links:    [{ label: "Model", url: "assets/docs/tata_steel_vs_jsw_cash_flow_analysis.xlsx" }]
+      links:    [{ label: "Model", url: "assets/docs/cfs_assignment_tata_jsw.xlsx" }]
     },
     {
       title:    "FinEase — AI Financial Analysis Agent",
@@ -152,6 +152,13 @@ window.CONTENT = {
       description: "Led a 10-member team on a field-based sustainability initiative, engaging farmers and SHGs to drive climate-resilient agricultural practices, strengthen market linkages, and create livelihood opportunities. Acted as the SPOC between villagers and team members, overcoming language and communication barriers to build trust and drive active community participation. Promoted modern, water-efficient farming practices and awareness of drought-resilient crops, connecting climate adaptation with sustainable livelihoods. Built direct market linkages by identifying vendors and reducing intermediary dependence, improving farmer value capture while enabling SHG-led employment in sorting, packaging, and coordination.",
       stack:    ["Leadership & Team Management", "Stakeholder Management", "Market Linkages & Value Chain", "Sustainability & ESG"],
       links:    [{ label: "Images", url: "assets/img/projects/karma_yoga/index.html" }]
+    },
+    {
+      title:    "DCF Reusable Model - Arvind Fashions Ltd.",
+      category: "Finance",
+      description: "Built a reusable Discounted Cash Flow (DCF) valuation model using Arvind Fashions Ltd. as the base case, integrating historical financials, operating assumptions, WACC, free cash flow projections, terminal value, and sensitivity analysis. Designed the model with structured assumptions and linked calculations, enabling it to be adapted efficiently for valuing other companies while maintaining consistency, flexibility, and analytical rigour.",
+      stack:    ["DCF Valuation", "Financial Modelling", "WACC", "Sensitivity Analysis", "Excel"],
+      links:    [{ label: "Model", url: "assets/docs/reusable_dcf_model.xlsx" }]
     }
   ],
 
